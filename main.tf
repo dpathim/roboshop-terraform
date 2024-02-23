@@ -2,7 +2,7 @@
 
 module "components" {
   source     = "git::https://github.com/dpathim/tf-module-basic-test.git"
-  for_each   = var.components
+  for_each   = var.component
 
 
   zone_id               = var.zone_id
