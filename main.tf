@@ -1,12 +1,9 @@
 
 
-module "components" {
-  source     = "git::https://github.com/dpathim/tf-module-basic-test.git"
-  for_each   = var.component
+module "vpc" {
+  source   = "git::https://github.com/dpathim/tf-module-vpc.git"
+  for_each = var.vpc
+  cidr = each.value["cidr"]
 
 
-  zone_id               = var.zone_id
-  security_groups       = var.security_groups
-  name                  = each.value["name"]
-  instance_type         = each.value["instance_type"]
 }
