@@ -21,7 +21,7 @@ vpc = {
 
 default_vpc_id = "vpc-0ea00bb90d84e71e1"
 default_vpc_cidr = "172.31.0.0/16"
-default_vpc_route_table_id ="rtb-0dc27a26c8b542a80"
+default_vpc_route_table_id = "rtb-0dc27a26c8b542a80"
 
 
 tags = {
@@ -43,10 +43,10 @@ alb = {
     sg_port = 80
   }
 
-  private = {
-    internal = true
-    lb_type = "application"
-    sg_ingress_cidr = ["172.31.0.0/16", "10.0.0.0/16"]
-    sg_port = 80
-  }
+#  private = {
+#    internal = true
+#    lb_type = "application"
+#    sg_ingress_cidr = ["172.31.0.0/16", "10.0.0.0/16"]
+#    sg_port = 80
+#  }
 }
