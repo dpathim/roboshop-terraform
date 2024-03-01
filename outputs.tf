@@ -2,7 +2,11 @@
 #  value = module.vpc
 #}
 
+#output "vpc" {
+#  value = local.app_subnets
+#}
+
 output "vpc" {
-  value = local.app_subnets
+  value = data.aws_subnets.subnets
 }
 
