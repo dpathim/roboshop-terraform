@@ -31,5 +31,6 @@ module "docdb" {
   for_each                  = var.docdb
   tags                       = var.tags
   env                        = var.env
-  sg_port                    = each.value["sg_port"]
+  subnet_ids                 = local.db_subnets
+
 }
