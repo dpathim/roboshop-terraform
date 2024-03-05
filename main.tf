@@ -67,6 +67,40 @@ module "rds" {
 }
 
 
+module "elasticache" {
+  source                    = "git::https://github.com/dpathim/tf-module-elasticache.git"
+  for_each                  = var.elasticache
+  tags                       = var.tags
+  env                        = var.env
+  subnet_ids                 = local.db_subnets
+  elasticache_type           = each.value["elasticache_type"]
+  vpc_id                      = local.vpc_id
+  sg_ingress_cidr             = local.app_subnets_cidr
+  engine_version             = each.value["engine_version"]
+  family                     = each.value["family"]
+  port                       = each.value["port"]
+  engine                     = each.value["engine"]
+  node_type                 = each.value["node_type"]
+  num_cache_nodes           = each.value["num_cache_nodes"]
+#  skip_final_snapshot        = each.value["skip_final_snapshot"]
+#  instance_count             = each.value["instance_count"]
+#  instance_class             = each.value["instance_class"]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
