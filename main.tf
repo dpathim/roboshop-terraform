@@ -43,3 +43,34 @@ module "docdb" {
   instance_class             = each.value["instance_class"]
 
 }
+
+
+
+module "rds" {
+  source                    = "git::https://github.com/dpathim/tf-module-rds.git"
+  for_each                  = var.rds
+  tags                       = var.tags
+  env                        = var.env
+  subnet_ids                 = local.db_subnets
+  rds_type                   = each.value["rds_type"]
+  vpc_id                      = local.vpc_id
+  sg_ingress_cidr             = local.app_subnets_cidr
+  engine_version             = each.value["engine_version"]
+  engine_family              = each.value["engine_family"]
+  db_port                    = each.value["db_port"]
+  engine                     = each.value["engine"]
+  backup_retention_period    = each.value["backup_retention_period"]
+  preferred_backup_window    = each.value["preferred_backup_window"]
+  skip_final_snapshot        = each.value["skip_final_snapshot"]
+}
+
+
+
+
+
+
+
+
+
+
+
