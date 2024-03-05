@@ -82,7 +82,7 @@ rds = {
 }
 
 
-elastichache = {
+elasticache = {
   main = {
     elasticache_type                   = "redis"
     engine_version                     = "6.2"
