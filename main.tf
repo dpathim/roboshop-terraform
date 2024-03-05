@@ -82,10 +82,30 @@ module "elasticache" {
   engine                     = each.value["engine"]
   node_type                 = each.value["node_type"]
   num_cache_nodes           = each.value["num_cache_nodes"]
-#  skip_final_snapshot        = each.value["skip_final_snapshot"]
-#  instance_count             = each.value["instance_count"]
-#  instance_class             = each.value["instance_class"]
+
 }
+
+
+module "rabbitmq" {
+  source                    = "git::https://github.com/dpathim/tf-module-rabbitmq.git"
+  for_each                  = var.rabbitmq
+  tags                       = var.tags
+  env                        = var.env
+  subnet_ids                 = local.db_subnets
+  vpc_id                      = local.vpc_id
+  sg_ingress_cidr             = local.app_subnets_cidr
+  engine_version             = each.value["engine_version"]
+  family                     = each.value["family"]
+  ssh_sg_ingress_cidr        = each.value["ssh_sg_ingress_cidr"]
+  instance_type              = each.value["instance_type"]
+
+}
+
+
+
+
+
+
 
 
 

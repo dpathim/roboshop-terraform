@@ -91,10 +91,15 @@ elasticache = {
     engine                             = "redis"
     node_type                          = "cache.t3.micro"
     num_cache_nodes                    = 1
-#    skip_final_snapshot     = true
-#    instance_count           = 1
-#    instance_class           = "db.t3.medium"
+  }
+}
+
+rabbitmq = {
+  main = {
+    ssh_sg_ingress_cidr = ["172.31.3.176/32"]
+    instance_type       = "t3.small"
 
   }
 }
+
 
