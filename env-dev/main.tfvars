@@ -1,3 +1,10 @@
+default_vpc_id = "vpc-0ea00bb90d84e71e1"
+default_vpc_cidr = "172.31.0.0/16"
+default_vpc_route_table_id = "rtb-0dc27a26c8b542a80"
+env = "dev"
+zone_id = "Z05403493ASGK93BQVTBE"
+
+
 vpc = {
  main = {
   cidr      = "10.0.0.0/16"
@@ -19,10 +26,6 @@ vpc = {
 }
 }
 
-default_vpc_id = "vpc-0ea00bb90d84e71e1"
-default_vpc_cidr = "172.31.0.0/16"
-default_vpc_route_table_id = "rtb-0dc27a26c8b542a80"
-env = "dev"
 
 tags = {
   company_name = "ABC Tech"
