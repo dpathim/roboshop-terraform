@@ -103,15 +103,20 @@ module "alb" {
 
 module "app" {
   source   = "git::https://github.com/dpathim/tf-module-app.git"
-  for_each = var.apps
+
   tags     = var.tags
   env      = var.env
   zone_id  = var.zone_id
-  component = each.name
+  ssh_ingress_cidr            = var.ssh_ingress_cidr
+
+
+  for_each = var.apps
+  component = each.key
   port      = each.value["port"]
 #  instance_type = each .value["instance_type"]
+
   sg_ingress_cidr             = local.app_subnets_cidr
-  ssh_ingress_cidr            = var.ssh_ingress_cidr
+
   vpc_id                      = local.vpc_id
   subnet_ids                 = local.app_subnets
 }
