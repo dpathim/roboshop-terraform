@@ -100,7 +100,6 @@ elasticache = {
 
 rabbitmq = {
   main = {
-
     instance_type       = "t3.small"
 
   }
@@ -108,15 +107,54 @@ rabbitmq = {
 
 apps = {
   frontend = {
-    instance_type = "t3.micro"
-    port          = 80
+    instance_type    = "t3.micro"
+    port             = 80
     desired_capacity = 1
-    max_size = 3
-    min_siz = 1
+    max_size         = 3
+    min_siz          = 1
+  }
 
-
+  catalogue = {
+    instance_type    = "t3.micro"
+    port             = 8080
+    desired_capacity = 1
+    max_size         = 3
+    min_siz          = 1
+  }
+  cart = {
+    instance_type    = "t3.micro"
+    port             = 8080
+    desired_capacity = 1
+    max_size         = 3
+    min_siz          = 1
+  }
+  user = {
+    instance_type    = "t3.micro"
+    port             = 8080
+    desired_capacity = 1
+    max_size         = 3
+    min_siz          = 1
+  }
+  shipping = {
+    instance_type    = "t3.micro"
+    port             = 8080
+    desired_capacity = 1
+    max_size         = 3
+    min_siz          = 1
+  }
+  payment = {
+    instance_type    = "t3.micro"
+    port             = 8080
+    desired_capacity = 1
+    max_size         = 3
+    min_siz          = 1
+  }
+  dispatch = {
+    instance_type    = "t3.micro"
+    port             = 8080
+    desired_capacity = 1
+    max_size         = 3
+    min_siz          = 1
 
   }
 }
-
-
