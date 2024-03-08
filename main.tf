@@ -102,13 +102,13 @@ module "rabbitmq" {
 
 
 module "app" {
-  source   = "git::https://github.com/dpathim/tf-module-app.git"
+  source                   = "git::https://github.com/dpathim/tf-module-app.git"
 
-  tags     = var.tags
-  env      = var.env
-  zone_id  = var.zone_id
-  ssh_ingress_cidr            = var.ssh_ingress_cidr
-
+  tags                     = var.tags
+  env                      = var.env
+  zone_id                  = var.zone_id
+  ssh_ingress_cidr         = var.ssh_ingress_cidr
+  default_vpc_id           = var.default_vpc_id
 
   for_each = var.apps
   component = each.key
