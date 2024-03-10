@@ -117,6 +117,7 @@ module "app" {
  max_size = each.value["max_size"]
  min_siz = each.value["min_siz"]
   lb_priority = each.value["lb_priority"]
+  parameters = each.value["parameters"]
 
 
 

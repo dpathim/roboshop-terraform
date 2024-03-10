@@ -113,6 +113,7 @@ apps = {
     max_size         = 3
     min_siz          = 1
     lb_priority      = 1
+    parameters       = []
 
   }
 
@@ -123,6 +124,7 @@ apps = {
     max_size         = 3
     min_siz          = 1
     lb_priority      = 2
+    parameters       = ["docdb"]
 
   }
   cart = {
@@ -132,6 +134,7 @@ apps = {
     max_size         = 3
     min_siz          = 1
     lb_priority      = 3
+    parameters       = ["docdb"]
 
   }
   user = {
@@ -141,6 +144,7 @@ apps = {
     max_size         = 3
     min_siz          = 1
     lb_priority      = 4
+    parameters       = []
 
   }
   shipping = {
@@ -150,6 +154,7 @@ apps = {
     max_size         = 3
     min_siz          = 1
     lb_priority      = 5
+    parameters       = []
 
   }
   payment = {
@@ -159,6 +164,7 @@ apps = {
     max_size         = 3
     min_siz          = 1
     lb_priority      = 6
+    parameters       = []
 
   }
   dispatch = {
@@ -168,6 +174,7 @@ apps = {
     max_size         = 3
     min_siz          = 1
     lb_priority      = 7
+    parameters       = []
 
 
   }
