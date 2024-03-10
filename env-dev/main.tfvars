@@ -134,7 +134,7 @@ apps = {
     max_size         = 3
     min_siz          = 1
     lb_priority      = 3
-    parameters       = ["docdb"]
+    parameters       = []
 
   }
   user = {
@@ -144,7 +144,7 @@ apps = {
     max_size         = 3
     min_siz          = 1
     lb_priority      = 4
-    parameters       = []
+    parameters       = ["docdb"]
 
   }
   shipping = {
