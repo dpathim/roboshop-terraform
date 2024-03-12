@@ -164,7 +164,7 @@ apps = {
     max_size         = 3
     min_siz          = 1
     lb_priority      = 6
-    parameters       = []
+    parameters       = [rabbitmq]
 
   }
   dispatch = {
