@@ -115,6 +115,7 @@ apps = {
     min_siz          = 1
     lb_priority      = 1
     parameters       = []
+    tags             = { Monitor_Nginx = "yes"}
 
   }
 
@@ -126,6 +127,7 @@ apps = {
     min_siz          = 1
     lb_priority      = 2
     parameters       = ["docdb"]
+    tags             = {}
 
   }
   cart = {
@@ -136,6 +138,7 @@ apps = {
     min_siz          = 1
     lb_priority      = 3
     parameters       = []
+    tags             = {}
 
   }
   user = {
@@ -146,6 +149,7 @@ apps = {
     min_siz          = 1
     lb_priority      = 4
     parameters       = ["docdb"]
+    tags             = {}
 
   }
   shipping = {
@@ -156,6 +160,7 @@ apps = {
     min_siz          = 1
     lb_priority      = 5
     parameters       = ["rds"]
+    tags             = {}
 
   }
   payment = {
@@ -166,6 +171,7 @@ apps = {
     min_siz          = 1
     lb_priority      = 6
     parameters       = ["rabbitmq"]
+    tags             = {}
 
   }
   dispatch = {
@@ -176,6 +182,7 @@ apps = {
     min_siz          = 1
     lb_priority      = 7
     parameters       = []
+    tags             = {}
 
 
   }
